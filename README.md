@@ -149,7 +149,7 @@ But also run it by passing in a path as its first argument:
         words.rb
       Applications
 
-## Release 5: Stretch with box drawing
+## Release 5: Stretch goal — box drawing
 
 As a stretch goal, modify your program to print lines representing the
 directory structure like the `tree` utility does. Let's take a look

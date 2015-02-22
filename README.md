@@ -177,7 +177,7 @@ This is a bit trickier than it seems. When printing this line:
     │   │   ├── which_data_structure.rb
 
 The program has to know that there are two higher level directories which
-still have contents to print so it can draw vertical for them. If those
+still have contents to print so it can draw a vertical line for them. If those
 directories have already printed their contents, though, the lines won't be
 there:
 

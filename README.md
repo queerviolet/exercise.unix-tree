@@ -109,7 +109,7 @@ When you run your program, you should see something like this:
           which_data_structure.rb
           which_data_structure_cheat_sheet.rb
         data-structures.md
-    debugger.rb
+        debugger.rb
 
 ## Release 4
 

@@ -12,15 +12,16 @@ def tree_maker(dir)
   # Dir.entries.all? {|entry| return File.join('.', entry) if File.file?(entry)}
 
   Dir.entries(dir).select do |entry|
-    if entry == '..' || entry == '.git'
+    if entry == '..' || entry == '.'
       next
     elsif File.directory?(entry)
-      # puts entry
       tree_maker(entry)
+      puts entry
       # puts File.join('entry', tree_maker(entry))
     else
+
       puts File.join('.', entry)
-      binding.pry
+      # binding.pry
 
     end
   end

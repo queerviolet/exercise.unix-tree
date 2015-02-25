@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 #draft one
 # Dir.entries('/Users/apprentice/Desktop/tree-utility-challenge').select do |entry|
 #   puts entry
@@ -6,7 +6,7 @@ require 'pry'
 # puts Dir.pwd
 # binding.pry
 
-#draft two - recursive
+#draft two - recursivegit
 def tree_maker(dir)
 
   # Dir.entries.all? {|entry| return File.join('.', entry) if File.file?(entry)}
@@ -15,21 +15,20 @@ def tree_maker(dir)
     # binding.pry
     if entry == '..' || entry == '.'
       next
-    elsif File.directory?("test_directory/#{entry}")
-      puts entry
+    end
+    if File.directory?(entry)
+      puts File.absolute_path(entry)
       tree_maker(entry)
       # puts File.join('entry', tree_maker(entry))
-    else
-      #Dir.glob(File.join("**", entry))
-      puts File.join('.', entry)
-
-
     end
+    #Dir.glob(File.join("**", entry))
+    puts File.join('.', entry)
+    # binding.pry
   end
 
 
 end
-tree_maker('../tree-utility-challenge')
+tree_maker('.')
 
 # Dir.entries('.').select do |entry|
 #     if entry == '..'

@@ -1,4 +1,4 @@
-# require 'pry'
+require 'pry'
 #draft one
 # Dir.entries('/Users/apprentice/Desktop/tree-utility-challenge').select do |entry|
 #   puts entry
@@ -11,24 +11,25 @@ def tree_maker(dir)
 
   # Dir.entries.all? {|entry| return File.join('.', entry) if File.file?(entry)}
 
-  Dir.entries(dir).select do |entry|
+  Dir.entries(dir).each do |entry|
+    # binding.pry
     if entry == '..' || entry == '.'
       next
-    elsif File.directory?(entry)
-      tree_maker(entry)
+    elsif File.directory?("test_directory/#{entry}")
       puts entry
+      tree_maker(entry)
       # puts File.join('entry', tree_maker(entry))
     else
-
+      #Dir.glob(File.join("**", entry))
       puts File.join('.', entry)
-      # binding.pry
+
 
     end
   end
 
 
 end
-tree_maker('.')
+tree_maker('../tree-utility-challenge')
 
 # Dir.entries('.').select do |entry|
 #     if entry == '..'
